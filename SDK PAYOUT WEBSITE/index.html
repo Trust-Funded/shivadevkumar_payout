@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Finance Portal | Final Payout Authorization</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Tahoma,sans-serif}
+    body{min-height:100vh;background:radial-gradient(1200px 600px at 10% -10%,#0f2a3a,#020b12);color:#eaf6ff;display:flex;align-items:center;justify-content:center}
+    .wrapper{width:100%;max-width:1100px;padding:28px}
+    .card{background:rgba(255,255,255,.06);border-radius:22px;padding:38px;box-shadow:0 30px 90px rgba(0,0,0,.65);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08)}
+
+    /* Authority Header */
+    .authority{text-align:center;margin-bottom:22px}
+    .authority h1{font-size:24px;font-weight:900;letter-spacing:1.6px}
+    .authority p{font-size:12px;opacity:.7;margin-top:6px}
+
+    /* Top brand bar */
+    .topbar{display:grid;grid-template-columns:1fr auto;align-items:center;margin-bottom:26px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#00ffa3,#00c2ff);display:grid;place-items:center;color:#002b2b;font-weight:900}
+    .brand h2{font-size:20px}
+    .brand span{font-size:13px;opacity:.75}
+    .status-pill{padding:8px 18px;border-radius:999px;font-size:12px;font-weight:800;color:#6bffbe;background:linear-gradient(135deg,rgba(0,255,163,.18),rgba(0,194,255,.18));border:1px solid rgba(0,255,163,.45)}
+
+    /* Owner section */
+    .owner{display:grid;grid-template-columns:140px 1fr;gap:22px;margin-bottom:30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:22px}
+    .owner img{width:120px;height:120px;border-radius:18px;object-fit:cover;border:2px solid rgba(0,255,163,.6)}
+    .owner .meta span{display:block;font-size:12px;opacity:.7}
+    .owner .meta strong{font-size:20px}
+    .owner .badge{margin-top:8px;display:inline-block;padding:6px 12px;border-radius:999px;font-size:11px;font-weight:700;color:#002b2b;background:linear-gradient(135deg,#7dffcf,#00c2ff)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;margin-bottom:34px}
+    .amount{background:linear-gradient(180deg,rgba(125,255,207,.14),rgba(0,0,0,0));border:1px solid rgba(125,255,207,.35);border-radius:20px;padding:30px}
+    .amount .label{font-size:13px;opacity:.85}
+    .amount .value{font-size:48px;font-weight:900;color:#7dffcf;margin:10px 0}
+    .amount .note{font-size:12px;opacity:.75}
+    .summary{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:22px}
+    .kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .kv .item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px}
+    .kv span{display:block;font-size:12px;opacity:.75}
+    .kv strong{font-size:14px;word-break:break-all}
+
+    /* Sections */
+    .section{margin-top:36px}
+    .section h3{font-size:18px;margin-bottom:14px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .panel{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px}
+    .panel h4{font-size:14px;margin-bottom:10px}
+    .panel ul{list-style:none;font-size:13px}
+    .panel li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.12)}
+    .panel li:last-child{border-bottom:none}
+    .ok{color:#6bffbe;font-weight:800}
+
+    /* Timeline */
+    .timeline .step{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:10px 0}
+    .dot{width:30px;height:30px;border-radius:50%;background:#6bffbe;color:#002b2b;display:grid;place-items:center;font-weight:900}
+
+    /* Notice & footer */
+    .notice{margin-top:34px;background:linear-gradient(135deg,rgba(0,194,255,.12),rgba(0,0,0,0));border:1px solid rgba(0,194,255,.35);border-radius:18px;padding:22px;font-size:13px;line-height:1.6}
+    .footer{margin-top:28px;text-align:center;font-size:12px;opacity:.6}
+
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.kv{grid-template-columns:1fr}.owner{grid-template-columns:1fr;justify-items:center;text-align:center}}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+
+      <!-- Authority -->
+      <div class="authority">
+        <h1>UNITED KINGDOM MINISTRY OF FINANCE</h1>
+        <p>Financial Security • Compliance • Authorized Settlement.</p>
+      </div>
+
+      <!-- Brand -->
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo">SF</div>
+          <div>
+            <h2>Secure Finance Portal</h2>
+            <span>Encrypted Verification & Settlement Summary</span>
+          </div>
+        </div>
+        <div class="status-pill">FINAL STATUS: PRE-APPROVED</div>
+      </div>
+
+      <!-- Owner -->
+      <div class="owner">
+        <img src="./image/SDK.JPG" alt="Account Owner Image" />
+        <div class="meta">
+          <span>Account Owner</span>
+          <strong>Shivadevkumar GK</strong>
+          <div class="badge">Identity Verified • KYC Confirmed</div>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="amount">
+          <div class="label">Authorized Payout Amount</div>
+          <div class="value">$225,000.00</div>
+          <div class="note">Authorization granted following full security, compliance, and risk clearance.</div>
+        </div>
+        <div class="summary">
+          <div class="kv">
+            <div class="item"><span>Asset</span><strong>USDT (Tether)</strong></div>
+            <div class="item"><span>Network</span><strong>TRC20</strong></div>
+            <div class="item"><span>Processing Reference</span><strong>SEC-CLR-884203</strong></div>
+            <div class="item"><span>Authorization Date</span><strong>11 Feb 2026</strong></div>
+            <div class="item"><span>Settlement Mode</span><strong>On-chain Transfer</strong></div>
+            <div class="item"><span>Risk Classification</span><strong>Low Risk</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fees -->
+      <div class="section">
+        <h3>Fees & System Charges</h3>
+        <div class="grid">
+          <div class="panel">
+            <h4>Pre-Processing System Fee</h4>
+            <ul>
+              <li><span>Description</span><span>VPS Server Transaction Token ID</span></li>
+              <li><span>Amount</span><span class="ok">$300.00 (USD)</span></li>
+              <li><span>Assessment Type</span><span>Owner-Payable (Pre-Processing)</span></li>
+              <li><span>Status</span><span>Pending — required before processing</span></li>
+            </ul>
+            <p style="margin-top:10px;font-size:12px;opacity:.75">This fee is assessed independently and does not reduce or alter the authorized payout amount.</p>
+          </div>
+          <div class="panel">
+            <h4>Payout Integrity Confirmation</h4>
+            <ul>
+              <li><span>Authorized Payout</span><span class="ok">$225,000.00</span></li>
+              <li><span>Deductions Applied</span><span>None</span></li>
+              <li><span>Processing Condition</span><span>Fee clearance required</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wallet -->
+      <div class="section">
+        <h3>Destination Wallet Information</h3>
+        <div class="grid">
+          <div class="panel">
+            <h4>Wallet Address</h4>
+            <p style="font-size:13px;word-break:break-all">TKq7FMW4Byxx6MVZCCn8Xmqb2VGXNcVpZy</p>
+          </div>
+          <div class="panel">
+            <h4>Wallet Validation</h4>
+            <ul>
+              <li><span>Checksum Verification</span><span class="ok">Passed</span></li>
+              <li><span>Blacklist Screening</span><span class="ok">Clear</span></li>
+              <li><span>Network Compatibility</span><span class="ok">Confirmed</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compliance -->
+      <div class="section">
+        <h3>Security & Compliance Review</h3>
+        <div class="grid">
+          <div class="panel">
+            <h4>Completed Checks</h4>
+            <ul>
+              <li><span>Identity Verification (KYC)</span><span class="ok">Approved</span></li>
+              <li><span>Anti-Money Laundering (AML)</span><span class="ok">Cleared</span></li>
+              <li><span>Source of Funds Review</span><span class="ok">Verified</span></li>
+              <li><span>Fraud & Sanctions Screening</span><span class="ok">No Matches</span></li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h4>Authorization Timeline</h4>
+            <div class="timeline">
+              <div class="step"><div class="dot">1</div><p>Submission received and logged.</p></div>
+              <div class="step"><div class="dot">2</div><p>Automated and manual reviews completed.</p></div>
+              <div class="step"><div class="dot">3</div><p>Final approval issued by settlement controller.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notice -->
+      <div class="notice">
+        <strong>Settlement Notice:</strong> All mandatory verification, compliance, and authorization checks in respect of the referenced payout have been duly completed and pre-approved. The settlement process remains contingent upon the clearance of pre-processing system requirements. Upon fulfillment, settlement will be processed in line with established financial governance, audit controls, and network validation standards. This page constitutes a settlement authorization summary and does not itself effect payment.
+      </div>
+
+      <div class="footer">© 2026 Secure Finance Portal </div>
+
+    </div>
+  </div>
+</body>
+</html>
